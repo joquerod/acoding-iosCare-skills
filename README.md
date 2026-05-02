@@ -9,15 +9,12 @@ A collection of [Agent Skills](https://agentskills.io) for Care.com iOS developm
 | [add-feature-flag](add-feature-flag/) | `/add-feature-flag` | Add a LaunchDarkly feature flag |
 | [add-graphql-api](add-graphql-api/) | `/add-graphql-api` | Add a GraphQL query/mutation + Swift service method |
 | [architecture](architecture/) | `/architecture` | Reference for the Care iOS module architecture |
-| [automate-app-enrollment](automate-app-enrollment/) | `/automate-app-enrollment` | Automate Caregiver enrollment on the simulator |
 | [build-and-run](build-and-run/) | `/build-and-run` | Build with Xcode MCP, check warnings, launch on simulator |
-| [create-skill](create-skill/) | `/create-skill` | Create a new skill in this repo |
+| [care-swiftui](care-swiftui/) | `/care-swiftui` | Hoopla component catalog + Care-specific SwiftUI conventions |
 | [debug-logs](debug-logs/) | `/debug-logs` | Add/evaluate temporary `<<>>` debug logs |
-| [delete-skill](delete-skill/) | `/delete-skill` | Remove a skill from this repo |
 | [mermaid](mermaid/) | `/mermaid` | Mermaid diagram styling reference |
 | [review-pr](review-pr/) | `/review-pr` | Review a PR with structured feedback |
 | [submit-pr](submit-pr/) | `/submit-pr` | Create a PR following Care iOS standards |
-| [swiftui](swiftui/) | `/swiftui` | SwiftUI review checklist + Hoopla components |
 | [testing](testing/) | `/testing` | Deterministic unit-testing workflow |
 | [update-apollo-schema](update-apollo-schema/) | `/update-apollo-schema` | Update Apollo schema + regenerate Swift |
 | [update-pr-notes](update-pr-notes/) | `/update-pr-notes` | Refresh PR description from latest commits |
