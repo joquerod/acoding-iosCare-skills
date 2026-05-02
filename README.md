@@ -23,7 +23,25 @@ A collection of [Agent Skills](https://agentskills.io) for Care.com iOS developm
 
 ## Installing
 
-Use the [agentskills.io](https://agentskills.io) CLI to install individual skills. Run from any project directory (or `~` for a global install):
+### Bulk install (all skills at once)
+
+The fastest way — clones the repo into a temp dir and copies every skill folder into `.claude/skills/` of the current project:
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/joquerod/acoding-iosCare-skills/main/install.sh)
+```
+
+For a global install (`~/.claude/skills/`, available across all projects):
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/joquerod/acoding-iosCare-skills/main/install.sh) global
+```
+
+The script prints each installed skill and exits. Claude Code's live detection picks them up without restart.
+
+### Single-skill install (via `npx skills add`)
+
+If you only want one skill, use the [agentskills.io](https://agentskills.io) CLI:
 
 ```bash
 npx skills add https://github.com/joquerod/acoding-iosCare-skills --skill <skill-name>
@@ -32,7 +50,7 @@ npx skills add https://github.com/joquerod/acoding-iosCare-skills --skill <skill
 Examples:
 
 ```bash
-npx skills add https://github.com/joquerod/acoding-iosCare-skills --skill swiftui
+npx skills add https://github.com/joquerod/acoding-iosCare-skills --skill care-swiftui
 npx skills add https://github.com/joquerod/acoding-iosCare-skills --skill submit-pr
 npx skills add https://github.com/joquerod/acoding-iosCare-skills --skill build-and-run
 ```
@@ -42,9 +60,7 @@ When prompted, choose:
 - **Agent**: Claude Code (or any other agentskills.io-compatible tool)
 - **Scope**: project (recommended for these iOS-Care skills) or global
 
-The CLI copies the skill into `<scope>/.claude/skills/<skill-name>/`, so the slash command (e.g. `/swiftui`) becomes available to that agent.
-
-To update a skill later, re-run `npx skills add ...` with the same arguments.
+To update a skill later, re-run the same command.
 
 ## Adding a new skill
 
@@ -61,7 +77,7 @@ To update a skill later, re-run `npx skills add ...` with the same arguments.
    ---
    ```
 3. Write the skill instructions as Markdown below the frontmatter.
-4. Commit + push. Reinstall with `npx skills add ...` to pick up changes in any project that uses the skill.
+4. Commit + push. Re-run the bulk-install script (or `npx skills add ...` for a single skill) to pick up changes in any project that uses it.
 
 The skill name must be lowercase letters, numbers, and hyphens only — and must match the directory name.
 
