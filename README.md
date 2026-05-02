@@ -37,7 +37,7 @@ For a global install (`~/.claude/skills/`, available across all projects):
 bash <(curl -fsSL https://raw.githubusercontent.com/joquerod/acoding-iosCare-skills/main/install.sh) global
 ```
 
-The script prints each installed skill and exits. Claude Code's live detection picks them up without restart.
+The script prints each installed skill and exits. **Run `/clear` in Claude Code or start a new session** — skills are only registered at session start, so they won't appear in your current session.
 
 ### Single-skill install (via `npx skills add`)
 
@@ -61,6 +61,22 @@ When prompted, choose:
 - **Scope**: project (recommended for these iOS-Care skills) or global
 
 To update a skill later, re-run the same command.
+
+## Uninstalling
+
+Remove every skill from this repo from your project's (or global) `.claude/skills/`. Skills not from this repo are left untouched.
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/joquerod/acoding-iosCare-skills/main/uninstall.sh)
+```
+
+For a global uninstall (`~/.claude/skills/`):
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/joquerod/acoding-iosCare-skills/main/uninstall.sh) global
+```
+
+After uninstall, run `/clear` in Claude Code or start a new session for the change to take effect.
 
 ## Adding a new skill
 

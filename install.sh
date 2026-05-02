@@ -49,4 +49,4 @@ done
 
 echo ""
 echo "Installed $count skills into $TARGET"
-echo "Claude Code's live detection should pick them up without restart."
+echo "Run /clear in Claude Code or start a new session — skills are registered at session start and won't appear in your current session."
