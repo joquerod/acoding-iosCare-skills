@@ -14,6 +14,7 @@ A collection of [Agent Skills](https://agentskills.io) for Care.com iOS developm
 | [debug-logs](debug-logs/) | `/debug-logs` | Add/evaluate temporary `<<>>` debug logs |
 | [mermaid](mermaid/) | `/mermaid` | Mermaid diagram styling reference |
 | [review-pr](review-pr/) | `/review-pr` | Review a PR with structured feedback |
+| [scaffold-feature-docs](scaffold-feature-docs/) | `/scaffold-feature-docs` | Scaffold the context-docs folder for a new bug/feature/epic |
 | [submit-pr](submit-pr/) | `/submit-pr` | Create a PR following Care iOS standards |
 | [testing](testing/) | `/testing` | Deterministic unit-testing workflow |
 | [update-apollo-schema](update-apollo-schema/) | `/update-apollo-schema` | Update Apollo schema + regenerate Swift |
