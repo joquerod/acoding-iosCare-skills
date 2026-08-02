@@ -38,7 +38,7 @@ role you're in.
 Recorded flows live in:
 
 ```
-/Users/jorgequezada/tools/bash_config/claude/ios-care/interactions/
+/Users/jorgequezada/tools/bash_config/claude/ios-care/claude-tools/sim-interactions/
 ```
 
 - One `<flow-name>.yaml` per flow, kebab-case (`login.yaml`, `enrollment.yaml`,
@@ -119,7 +119,7 @@ Every flow file should carry a `login_state:` / precondition note describing wha
 
 ### Step 3 — Read the library
 
-Check `interactions/` for a matching `<flow>.yaml`.
+Check `sim-interactions/` for a matching `<flow>.yaml`.
 
 - **Found → REPLAY mode** (Step 4A).
 - **Not found → RECORD mode** (Step 4B).
@@ -154,8 +154,8 @@ Check `interactions/` for a matching `<flow>.yaml`.
 3. **Reuse, don't duplicate.** If part of the journey is an existing flow (e.g. login), make
    the new flow **composed** — `include:` the shared core + a `switch-environment` include if
    needed, then only record the steps unique to the new destination.
-4. When you reach the `end_state`, **write** `interactions/<flow>.yaml` using the schema
-   below (include the `device:` field), and update `interactions/README.md`.
+4. When you reach the `end_state`, **write** `sim-interactions/<flow>.yaml` using the schema
+   below (include the `device:` field), and update `sim-interactions/README.md`.
 5. Tell the user the flow was recorded and will replay faster next time.
 
 ### Step 5 — Learn
@@ -415,7 +415,7 @@ can't express. Two rules:
   - Bash: `Bash(xcrun simctl*)`, `Bash(axe:*)` (or per-subcommand `axe tap:*`/`type:*`/…),
     `Bash(python3:*)`, `Bash(UDID=*)`, `Bash(sleep *)`, `Bash(echo:*)`.
   - `Skill(interact-with-sim)` — so invoking the skill doesn't prompt.
-  - `Write(//Users/jorgequezada/tools/bash_config/claude/ios-care/interactions/**)` and the
+  - `Write(//Users/jorgequezada/tools/bash_config/claude/ios-care/claude-tools/sim-interactions/**)` and the
     matching `Edit(...)` — so recording and self-heal can write flow files unattended.
   - **Intentionally NOT allow-listed:** edits to this `SKILL.md`. Meta-learning changes stay
     gated so the skill asks before rewriting itself.
